@@ -34,16 +34,19 @@ public class Subject implements Comparable {
     public void setCompulsory(boolean compulsory) {
         this.compulsory = compulsory;
     }
-    
+
     public List<String> getPossibleTimeSlots() {
         return possibleTimeSlots;
     }
+
     public String getTimeSlot() {
         return timeSlot;
     }
+
     public void setRoom(String room) {
         this.room = room;
     }
+
     public void setTimeSlot(String timeSlot) {
         this.timeSlot = timeSlot;
     }
@@ -51,27 +54,30 @@ public class Subject implements Comparable {
     public String getRoom() {
         return room;
     }
-    public Boolean used(String room, String timeSlot){
-        return this.room.equals(room)&& this.timeSlot.equals(timeSlot);
+
+    public Boolean used(String room, String timeSlot) {
+        return this.room.equals(room) && this.timeSlot.equals(timeSlot);
     }
-    public int getSize(){
+
+    public int getSize() {
         return this.possibleTimeSlots.size();
     }
 
     @Override
     public int compareTo(Object o) {
-        Subject compSub = (Subject)o; 
-        if(this.getSize()>compSub.getSize())return(1);
-        if(this.getSize()==compSub.getSize())return(0);
-        if(this.getSize()<compSub.getSize())return(-1);
-        else return 10;
+        Subject compSub = (Subject) o;
+        if (this.getSize() > compSub.getSize())
+            return (1);
+        if (this.getSize() == compSub.getSize())
+            return (0);
+        if (this.getSize() < compSub.getSize())
+            return (-1);
+        else
+            return 10;
     }
-    
-    public void addPossibleTimeSlot(String timeSlot){
+
+    public void addPossibleTimeSlot(String timeSlot) {
         this.possibleTimeSlots.add(timeSlot);
     }
-  
-    
-    
-    
+
 }
