@@ -1,0 +1,11 @@
+sub1,c,m1,m2,,
+sub2,c,m1,m3,,
+sub3,o,m3,m4,,
+sub4,o,m1,m4,,
+sub5,c,m1,m4,m5,
+sub6,c,m3,m4,m6,
+sub7,c,m2,m3,m4,m7
+sub8,o,m1,m8,,
+sub9,c,m9,,,
+sub10,c,m3,m10,,
+r1,r2,r3,r4,r5,
