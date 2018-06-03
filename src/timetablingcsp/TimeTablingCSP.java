@@ -51,10 +51,14 @@ public class TimeTablingCSP {
             assignment = new Assignment();
             DataHandler dr = new DataHandler();
             dr.readData(subjects, rooms, input);
-            recursiveAssign(0);
-            List<Subject> subs = assignment.getSubjects();
-            dr.writeData(subs, output);
-            System.out.println("done scheduling!");
+            boolean out = recursiveAssign(0);
+            if (out) {
+                List<Subject> subs = assignment.getSubjects();
+                dr.writeData(subs, output);
+                System.out.println("done scheduling!");
+            } else {
+                System.out.println("cannot schedule!!");
+            }
         } else {
             System.out.println("wrong file types!");
         }
